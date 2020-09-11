@@ -1,0 +1,196 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  text-align: center;
+}
+
+header  {
+  position: fixed;
+  top: 0px;
+  height: 25px;
+  background-color: #004c3f;
+  display: none;
+  color: white;
+  width: 100%;
+  z-index: 4;
+}
+ol li {
+  background-image: linear-gradient(to bottom right, white, #004c3f);
+}
+ul, ol {
+  position: relative;
+  top: 40px;
+}
+h1{
+font-size: 60px;
+font-family: 'Futura';
+color: #fff;
+text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #004c3f, 0 0 30px #004c3f, 0 0 40px #004c3f, 0 0 55px #004c3f, 0 0 75px #004c3f;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+input {
+  width: 200px;
+}
+li {
+  float: left;
+  width: 25%;
+  height: 450px;
+  list-style: none;
+  text-align: center;
+  overflow: hidden;
+}
+
+li > img {
+  height: 400px;
+  width: 300px;
+}
+
+/* Child Text Container */
+li h2 {
+  position: relative;
+  bottom: 400px;
+  background: black;
+  color: #004c3f;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+  opacity: 0;
+  width: 100%;
+  display: none;
+  float: left;
+}
+
+/* Hover on Parent Container */
+li:hover img {
+  cursor: pointer;
+  bottom: 250px;
+}
+
+li:hover h2 {
+  position: relative;
+  bottom: 405px;
+  right: 0;
+  display: block;
+  opacity: 1;
+  padding: 3.5%;
+  float: left;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+  background-color: rgba(255,255,255,0.88);
+}
+
+li:hover a img {
+  position: relative;
+  bottom: 250px;
+  visibility: visible;
+  display: block;
+  padding-right: 50%;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+  /* float: left; */
+}
+a {
+  visibility: hidden;
+  width: 300px;
+  background-color: rgba(255,255,255,0.80);
+}
+a img {
+  position: relative;
+  bottom: 285px;
+  height: 30px;
+  padding: 0 39%;
+  padding-right: 50%;
+  margin: 4px 0;
+  background-color: rgba(255,255,255,0.80);
+}
+
+ol a img {
+background-color: rgba(255,255,255,0.80);
+}
+
+a:hover {
+  background-color: #004c3f;
+}
+li:hover{
+  position: relative;
+  top: 20px;
+}
+
+ol li:hover [src='img/trailerIn.png'], ol li:hover [src='img/thumbsupIn.png']  {
+  position: relative;
+  bottom: 250px;
+  visibility: visible;
+  display: block;
+  padding-right: 50%;
+  padding-left: 45%;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+  background-color: rgba(0, 76, 63,0.80);
+  background-blend-mode: screen;
+  color: white;
+  /* float: left; */
+}
+ol li:hover h2 {
+  color: white;
+  background-color: rgba(0, 76, 63,0.88);
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('../img/background.jpg');
+  background-size: cover;
+  background-repeat: space;
+}
+
+[src='img/trailer.jpg'], [src='img/thumbsup.png'] {
+padding-left: 45%;
+padding-right: 50%;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #004c3f;
+  border-right: none;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #004c3f;
+  margin-top: 20px;
+}
+
+.searchTerm:focus{
+  color: #004c3f;
+}
+
+.searchButton {
+  border: 1px solid #004c3f;
+  background: #004c3f;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
