@@ -73,7 +73,7 @@ let Shoppies = {
   votes: [],
 
   getTrailers: (num)=>{
-    fetch(`https://youtube-search-and-download.p.rapidapi.com/search?query=${Shoppies.youtubeNames[num]}%20Trailer&type=v&duration=s&sort=r`, {
+    fetch(`https://youtube-search-and-download.p.rapidapi.com/search?query=${Shoppies.youtubeNames[num].split(" ").join("%20")}%20Trailer&type=v&duration=s&sort=r`, {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "youtube-rest-api.p.rapidapi.com",
