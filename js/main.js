@@ -81,6 +81,7 @@ let Shoppies = {
         }})
     .then(response => response.json())
     .then(data => {
+        console.log(data)
         window.open(`https://youtube.com/watch?v=${data.content[0].video.videoId}`, '_blank')
       // if(data.playlistData.length){
       //   window.open(`https://youtube.com/watch?v=${data.playlistData[0].endpointVideoId}`, '_blank')
