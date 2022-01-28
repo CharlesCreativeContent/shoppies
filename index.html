@@ -4,7 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>The Shoppies</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 
@@ -15,12 +18,14 @@
   <h1>The Shoppies</h1>
   <div class="wrap">
      <div class="search">
-        <input type="search" class="searchTerm" placeholder="Search for a Movie...">
+        <input type="search" class="searchTerm" placeholder="Search for Show or Movie and Nominate 5...">
         <button type="submit" class="searchButton" onclick="Shoppies.find()">Search</button>
      </div>
   </div>
+  <img id='loading' src=''/>
   <ol id='myList'></ol>
   <ul></ul>
+  <script src="js/confetti.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 </body>
 
