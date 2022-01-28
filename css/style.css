@@ -17,8 +17,13 @@ header  {
   width: 100%;
   z-index: 4;
 }
+ol li > img {
+border-top: 2px #004c3f solid;
+}
 ol li {
-  background-image: linear-gradient(to bottom right, white, #004c3f);
+  background-image: linear-gradient(to bottom right, rgba(0,0,0,0), #004c3f);
+  background-image: radial-gradient(farthest-corner at 50% 0px,
+      #eee, #eee 50%, #004c3f 70%, transparent 85%);
 }
 ul, ol {
   position: relative;
@@ -149,10 +154,31 @@ body{
   background-size: cover;
   background-repeat: space;
 }
+.hover {
+background-image: radial-gradient(farthest-corner at 50% 50%,
+      #fff 0%, #004c3f 100%);
+}
 
-[src='img/trailer.jpg'], [src='img/thumbsup.png'] {
+ol [src='img/trailerIn.png'].hover, ol [src='img/thumbsupIn.png'].hover {
+background-image: radial-gradient(farthest-corner at 50% 50%,
+      #004c3f 0%, #fff 100%);
+}
+
+[src='img/trailer.jpg'], [src='img/thumbsup.png'], [src='img/thumbsDown.png']:hover {
 padding-left: 45%;
 padding-right: 50%;
+}
+
+[src='img/thumbsDown.png']:hover {
+  background-color: red
+}
+
+body > img {
+  width: 50%;
+}
+
+.loadingToggle{
+  display: none;
 }
 
 .search {
