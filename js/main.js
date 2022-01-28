@@ -1,5 +1,14 @@
+
 let Shoppies = {
     proxy: "https://cors-anywhere.herokuapp.com/",
+	imdb: {
+	"name": process.env.NETLIFY_IMDB_API,
+	"secret": process.env.NETLIFY_IMDB_API_SECRET,
+	},
+	youtube: {
+	"name": process.env,NETLIFY_YOUTUBE_API,
+	"secret": process.env.NETLIFY_YOUTUBE_API_SECRET,
+	},
     find: ()=>{
       document.getElementById('loading').src = 'https://static.wixstatic.com/media/5d146b_3ddf641633024d5fa73b7974131fbaea~mv2.gif'
       document.getElementById('myList').classList.toggle('loadingToggle')
@@ -23,8 +32,8 @@ let Shoppies = {
             return fetch(Shoppies.proxy+`https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=${z}`, {
               "method": "GET",
               "headers": {
-                "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
-                "x-rapidapi-key": "84e7a29794msh94419e852b59e91p10e7cbjsn04b5bacebd18"
+                "x-rapidapi-host": Shoppies.imdb.name,
+                "x-rapidapi-key": Shoppies.imdb.secret
               }})
             .then(response => response.json()).then(y=>{
             console.log(y)
@@ -77,8 +86,8 @@ let Shoppies = {
       "method": "GET",
       "mode": 'cors',
     "headers": {
-		"x-rapidapi-host": "youtube-search-and-download.p.rapidapi.com",
-		"x-rapidapi-key": "84e7a29794msh94419e852b59e91p10e7cbjsn04b5bacebd18"
+		"x-rapidapi-host": Shoppies.youtube.name,
+		"x-rapidapi-key":  Shoppies.youtube.secret
 	}
           })
     .then(response => response.json())
