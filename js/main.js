@@ -73,12 +73,14 @@ let Shoppies = {
   votes: [],
 
   getTrailers: (num)=>{
-    fetch(`https://youtube-search-and-download.p.rapidapi.com/search?query=${Shoppies.youtubeNames[num].split(" ").join("%20")}%20Trailer&type=v&duration=s&sort=r`, {
+    fetch(Shoppies.proxy+`https://youtube-search-and-download.p.rapidapi.com/search?query=${Shoppies.youtubeNames[num].split(" ").join("%20")}%20Trailer&type=v&duration=s&sort=r`, {
       "method": "GET",
-      "headers": {
-        "x-rapidapi-host": "youtube-rest-api.p.rapidapi.com",
-        'x-rapidapi-key': '84e7a29794msh94419e852b59e91p10e7cbjsn04b5bacebd18'
-        }})
+      "mode": 'cors',
+    "headers": {
+		"x-rapidapi-host": "youtube-search-and-download.p.rapidapi.com",
+		"x-rapidapi-key": "84e7a29794msh94419e852b59e91p10e7cbjsn04b5bacebd18"
+	}
+          })
     .then(response => response.json())
     .then(data => {
         console.log(data)
