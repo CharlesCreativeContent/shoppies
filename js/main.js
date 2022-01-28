@@ -77,7 +77,7 @@ let Shoppies = {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "youtube-rest-api.p.rapidapi.com",
-        "x-rapidapi-key": "3ae1d00c97msh298612aebb81230p11684djsn405007844583"
+        'x-rapidapi-key': '84e7a29794msh94419e852b59e91p10e7cbjsn04b5bacebd18'
         }})
     .then(response => response.json())
     .then(data => {
