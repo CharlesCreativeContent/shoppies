@@ -19,8 +19,8 @@ let Shoppies = {
           return fetch(proxyurl+`https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=${x}`, {
           "method": "GET",
           "headers": {
-            "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
-            "x-rapidapi-key": "3ae1d00c97msh298612aebb81230p11684djsn405007844583"
+		"x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
+		"x-rapidapi-key": "84e7a29794msh94419e852b59e91p10e7cbjsn04b5bacebd18"
           }})
           .then(response => response.json()).then(y=>{
             Shoppies.availabilities.push(y)
@@ -64,8 +64,8 @@ localStorage.setItem(
   getTrailers: (num)=>{ fetch(`https://youtube-rest-api.p.rapidapi.com/search?q=${Shoppies.youtubeNames[num]}`, {
  "method": "GET",
  "headers": {
-   "x-rapidapi-host": "youtube-rest-api.p.rapidapi.com",
-   "x-rapidapi-key": "3ae1d00c97msh298612aebb81230p11684djsn405007844583"
+       'x-rapidapi-host': 'youtube-rest-api.p.rapidapi.com',
+       'x-rapidapi-key': '84e7a29794msh94419e852b59e91p10e7cbjsn04b5bacebd18'
  }
 }).then(response => response.json())
 .then(data => {
