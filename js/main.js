@@ -6,7 +6,7 @@ let Shoppies = {
 	"secret": process.env.NETLIFY_IMDB_API_SECRET,
 	},
 	youtube: {
-	"name": process.env,NETLIFY_YOUTUBE_API,
+	"name": process.env.NETLIFY_YOUTUBE_API,
 	"secret": process.env.NETLIFY_YOUTUBE_API_SECRET,
 	},
     find: ()=>{
