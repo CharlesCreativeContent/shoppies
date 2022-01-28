@@ -73,8 +73,7 @@ let Shoppies = {
   votes: [],
 
   getTrailers: (num)=>{
-      // Shoppies.proxy //
-    fetch(`https://youtube-rest-api.p.rapidapi.com/search?q=${Shoppies.youtubeNames[num]}`, {
+    fetch(Shoppies.proxy+`https://youtube-search-and-download.p.rapidapi.com/search?query=${Shoppies.youtubeNames[num]}%20Trailer&type=v&duration=s&sort=r`, {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "youtube-rest-api.p.rapidapi.com",
@@ -82,12 +81,14 @@ let Shoppies = {
         }})
     .then(response => response.json())
     .then(data => {
-      console.log(data)
-      if(data.playlistData.length){
-        window.open(`https://youtube.com/watch?v=${data.playlistData[0].endpointVideoId}`, '_blank')
-        }else{
-        window.open(`https://youtube.com/watch?v=${data.videoData[0].videoId}`, '_blank')
-        }})},
+        window.open(`https://youtube.com/watch?v=${data.content[0].video.videoId}`, '_blank')
+      // if(data.playlistData.length){
+      //   window.open(`https://youtube.com/watch?v=${data.playlistData[0].endpointVideoId}`, '_blank')
+      //   }else{
+      //   window.open(`https://youtube.com/watch?v=${data.videoData[0].videoId}`, '_blank')
+      //   }
+      })
+    },
 
   banner: ()=>{
     if(document.querySelectorAll('ol li').length>=5){
