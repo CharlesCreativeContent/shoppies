@@ -169,33 +169,6 @@ padding-left: 45%;
 padding-right: 50%;
 }
 
-
-
-@media (max-width: 1200px){
-  li{
-  width: 33vw;
-  }
-  .wrap{
-    width: 40vw;
-  }
-}
-@media (max-width: 900px){
-  li{
-  width: 50vw;
-  }
-  .wrap{
-    width: 60vw;
-  }
-}
-@media (max-width: 600px){
-  li{
-  width: 100vw;
-  }
-  .wrap{
-    width: 90vw;
-  }
-}
-
 [src='img/thumbsDown.png']:hover {
   background-color: red
 }
@@ -247,3 +220,31 @@ body > img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+
+@media (max-width: 1200px){
+  li{
+  width: 33vw;
+  }
+  .wrap{
+    width: 40vw;
+  }
+}
+@media (max-width: 900px){
+  li{
+  width: 50vw;
+  }
+  .wrap{
+    width: 60vw;
+  }
+}
+@media (max-width: 600px){
+  li{
+  width: 100vw;
+  }
+  .wrap{
+    width: 90vw;
+  }
+}
+
