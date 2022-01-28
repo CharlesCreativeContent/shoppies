@@ -1,14 +1,15 @@
-
+let youtube = {
+	"name": "youtube-search-and-download.p.rapidapi.com",
+	"secret": "84e7a29794msh94419e852b59e91p10e7cbjsn04b5bacebd18",
+	},
+let imdb = {
+	"name": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
+	"secret": "84e7a29794msh94419e852b59e91p10e7cbjsn04b5bacebd18",
+}
 let Shoppies = {
     proxy: "https://cors-anywhere.herokuapp.com/",
-	imdb: {
-	"name": process.env.NETLIFY_IMDB_API,
-	"secret": process.env.NETLIFY_IMDB_API_SECRET,
-	},
-	youtube: {
-	"name": process.env.NETLIFY_YOUTUBE_API,
-	"secret": process.env.NETLIFY_YOUTUBE_API_SECRET,
-	},
+	imdb,
+	youtube,
     find: ()=>{
       document.getElementById('loading').src = 'https://static.wixstatic.com/media/5d146b_3ddf641633024d5fa73b7974131fbaea~mv2.gif'
       document.getElementById('myList').classList.toggle('loadingToggle')
