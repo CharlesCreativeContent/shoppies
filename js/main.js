@@ -1,7 +1,7 @@
 let youtube = {
 	"name": "youtube-search-and-download.p.rapidapi.com",
 	"secret": "84e7a29794msh94419e852b59e91p10e7cbjsn04b5bacebd18",
-	},
+	}
 let imdb = {
 	"name": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
 	"secret": "84e7a29794msh94419e852b59e91p10e7cbjsn04b5bacebd18",
