@@ -73,7 +73,8 @@ let Shoppies = {
   votes: [],
 
   getTrailers: (num)=>{
-    fetch(Shoppies.proxy+`https://youtube-rest-api.p.rapidapi.com/search?q=${Shoppies.youtubeNames[num]}`, {
+      // Shoppies.proxy //
+    fetch(`https://youtube-rest-api.p.rapidapi.com/search?q=${Shoppies.youtubeNames[num]}`, {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "youtube-rest-api.p.rapidapi.com",
