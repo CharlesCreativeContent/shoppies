@@ -2,12 +2,12 @@
 let Shoppies = {
     proxy: "https://cors-anywhere.herokuapp.com/",
 	imdb: {
-	"name": process.env.NETLIFY_IMDB_API,
-	"secret": process.env.NETLIFY_IMDB_API_SECRET,
+	"name": NETLIFY_IMDB_API,
+	"secret": NETLIFY_IMDB_API_SECRET,
 	},
 	youtube: {
-	"name": process.env.NETLIFY_YOUTUBE_API,
-	"secret": process.env.NETLIFY_YOUTUBE_API_SECRET,
+	"name": NETLIFY_YOUTUBE_API,
+	"secret": NETLIFY_YOUTUBE_API_SECRET,
 	},
     find: ()=>{
       document.getElementById('loading').src = 'https://static.wixstatic.com/media/5d146b_3ddf641633024d5fa73b7974131fbaea~mv2.gif'
